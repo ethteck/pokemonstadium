@@ -1,0 +1,65 @@
+name: Pokemon Stadium (North America)
+crc1: 90F5D9B3
+crc2: 9D0EDCF0
+basename: pokemonstadium
+options: ["find-file-boundaries"]
+
+segments:
+  - [0x000000, "bin", "header"]
+  - [0x000040, "bin", "boot"]
+  - name: app
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    files:
+    - [0x1000, "asm"]
+    - [0x1060, "asm"]
+    - [0x11C0, "asm"]
+    - [0x1F80, "asm"]
+    - [0x28E0, "asm"]
+    - [0x2EC0, "asm"]
+    - [0x3A80, "asm"]
+    - [0x3FB0, "asm"]
+    - [0x60A0, "asm"]
+    - [0x6430, "asm"]
+    - [0x6BC0, "asm"]
+    - [0x75F0, "asm"]
+    - [0x8EC0, "asm"]
+    - [0xAF00, "asm"]
+    - [0xB130, "asm"]
+    - [0xC030, "asm"]
+    - [0xC3F0, "asm"]
+    - [0xC4B0, "asm"]
+    - [0x18140, "asm"]
+    - [0x18480, "asm"]
+    - [0x19840, "asm"]
+    - [0x1AB70, "asm"]
+    - [0x1CF30, "asm"]
+    - [0x20330, "asm"]
+    - [0x20470, "asm"]
+    - [0x22630, "asm"]
+    - [0x26820, "asm"]
+    - [0x29BA0, "asm"]
+    - [0x2C1C0, "asm"]
+    - [0x2D340, "asm"]
+    - [0x2E110, "asm"]
+    - [0x2E460, "asm"]
+    - [0x2FEA0, "asm"]
+    - [0x30640, "asm"]
+    - [0x32D10, "asm"]
+    - [0x33E30, "asm"]
+    - [0x33FE0, "asm"]
+    - [0x37370, "asm"]
+    - [0x373A0, "asm"]
+    - [0x3D140, "asm"]
+    - [0x43520, "asm"]
+    - [0x435B0, "asm"]
+    - [0x435D0, "asm"]
+    - [0x45720, "asm"]
+    - [0x46680, "asm"]
+    - [0x47B60, "asm"]
+    - [0x485C0, "asm"]
+    - [0x48C60, "asm"]
+#    - [0x490A0, "asm"]
+  - [0x490A0, "bin"] # 0x66C90
+  - [0x1000000]

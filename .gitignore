@@ -1,0 +1,12 @@
+.vscode/
+bin/
+build/
+__pycache__/
+
+*.o
+*.z64
+
+undefined_funcs.txt
+asm/
+
+*.ld
