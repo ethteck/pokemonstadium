@@ -7,7 +7,7 @@ options: ["find-file-boundaries"]
 segments:
   - [0x000000, "bin", "header"]
   - [0x000040, "bin", "boot"]
-  - name: app
+  - name: code
     type: code
     start: 0x1000
     vram: 0x80000400
@@ -29,7 +29,14 @@ segments:
     - [0xB130, "asm"]
     - [0xC030, "asm"]
     - [0xC3F0, "asm"]
-    - [0xC4B0, "asm"]
+    - [0xC4B0, "bin"]
+    - [0xCE80, "asm"]
+    - [0xDDC0, "asm"]
+    - [0xE1C0, "asm"]
+    - [0xE570, "asm"]
+    - [0xE890, "asm"]
+    - [0x11BA0, "asm"]
+    - [0x12D80, "asm"]
     - [0x18140, "asm"]
     - [0x18480, "asm"]
     - [0x19840, "asm"]
@@ -60,6 +67,5 @@ segments:
     - [0x47B60, "asm"]
     - [0x485C0, "asm"]
     - [0x48C60, "asm"]
-#    - [0x490A0, "asm"]
   - [0x490A0, "bin"] # 0x66C90
-  - [0x1000000]
+  - [0x2000000]
