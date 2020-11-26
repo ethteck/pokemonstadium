@@ -53,7 +53,7 @@ glabel func_8004F2F0
 /* 4FEF4 8004F2F4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 4FEF8 8004F2F8 00802825 */  or         $a1, $a0, $zero
 /* 4FEFC 8004F2FC AFA50018 */  sw         $a1, 0x18($sp)
-/* 4FF00 8004F300 0C015B04 */  jal        func_80056C10
+/* 4FF00 8004F300 0C015B04 */  jal        osSetIntMask
 /* 4FF04 8004F304 24040001 */   addiu     $a0, $zero, 1
 /* 4FF08 8004F308 3C038008 */  lui        $v1, %hi(D_80078584)
 /* 4FF0C 8004F30C 24638584 */  addiu      $v1, $v1, %lo(D_80078584)
@@ -66,7 +66,7 @@ glabel func_8004F2F0
 /* 4FF28 8004F328 8F190000 */  lw         $t9, ($t8)
 /* 4FF2C 8004F32C ACB90000 */  sw         $t9, ($a1)
 /* 4FF30 8004F330 8C680000 */  lw         $t0, ($v1)
-/* 4FF34 8004F334 0C015B04 */  jal        func_80056C10
+/* 4FF34 8004F334 0C015B04 */  jal        osSetIntMask
 /* 4FF38 8004F338 AD050000 */   sw        $a1, ($t0)
 /* 4FF3C 8004F33C 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 4FF40 8004F340 27BD0018 */  addiu      $sp, $sp, 0x18

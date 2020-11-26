@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80056C10
+glabel osSetIntMask
 /* 57810 80056C10 400C6000 */  mfc0       $t4, $12
 /* 57814 80056C14 3182FF01 */  andi       $v0, $t4, 0xff01
 /* 57818 80056C18 3C088008 */  lui        $t0, 0x8008
