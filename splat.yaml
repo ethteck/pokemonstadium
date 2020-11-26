@@ -123,7 +123,7 @@ segments:
     - [0x572D0, asm]
     - [0x574C0, c, os/O1/osSendMesg]
     - [0x57610, c, os/O1/osStopThread]
-    - [0x576D0, asm]
+    - [0x576D0, c, os/O1/osRecvMesg]
     - [0x57810, asm]
     - [0x57990, asm]
     - [0x57F00, asm]

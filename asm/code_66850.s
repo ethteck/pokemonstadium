@@ -89,7 +89,7 @@ glabel func_80065C80
 /* 66960 80065D60 24040001 */   addiu     $a0, $zero, 1
 /* 66964 80065D64 02402025 */  or         $a0, $s2, $zero
 /* 66968 80065D68 00002825 */  or         $a1, $zero, $zero
-/* 6696C 80065D6C 0C015AB4 */  jal        func_80056AD0
+/* 6696C 80065D6C 0C015AB4 */  jal        osRecvMesg
 /* 66970 80065D70 24060001 */   addiu     $a2, $zero, 1
 /* 66974 80065D74 3C058010 */  lui        $a1, 0x8010
 /* 66978 80065D78 24A54B70 */  addiu      $a1, $a1, 0x4b70
@@ -100,7 +100,7 @@ glabel func_80065C80
 /* 6698C 80065D8C A02C2180 */  sb         $t4, 0x2180($at)
 /* 66990 80065D90 02402025 */  or         $a0, $s2, $zero
 /* 66994 80065D94 00002825 */  or         $a1, $zero, $zero
-/* 66998 80065D98 0C015AB4 */  jal        func_80056AD0
+/* 66998 80065D98 0C015AB4 */  jal        osRecvMesg
 /* 6699C 80065D9C 24060001 */   addiu     $a2, $zero, 1
 /* 669A0 80065DA0 00001825 */  or         $v1, $zero, $zero
 .L80065DA4:

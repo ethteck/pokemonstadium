@@ -25,7 +25,7 @@ glabel func_80058E10
 /* 59A48 80058E48 24040001 */   addiu     $a0, $zero, 1
 /* 59A4C 80058E4C 8FA40020 */  lw         $a0, 0x20($sp)
 /* 59A50 80058E50 00002825 */  or         $a1, $zero, $zero
-/* 59A54 80058E54 0C015AB4 */  jal        func_80056AD0
+/* 59A54 80058E54 0C015AB4 */  jal        osRecvMesg
 /* 59A58 80058E58 24060001 */   addiu     $a2, $zero, 1
 .L80058E5C:
 /* 59A5C 80058E5C 3C058010 */  lui        $a1, 0x8010

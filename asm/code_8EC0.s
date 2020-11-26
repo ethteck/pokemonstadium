@@ -871,7 +871,7 @@ glabel func_80008EB4
 .L80008EF4:
 /* 9AF4 80008EF4 02202025 */  or         $a0, $s1, $zero
 /* 9AF8 80008EF8 02002825 */  or         $a1, $s0, $zero
-/* 9AFC 80008EFC 0C015AB4 */  jal        func_80056AD0
+/* 9AFC 80008EFC 0C015AB4 */  jal        osRecvMesg
 /* 9B00 80008F00 24060001 */   addiu     $a2, $zero, 1
 /* 9B04 80008F04 0C002392 */  jal        func_80008E48
 /* 9B08 80008F08 00000000 */   nop       

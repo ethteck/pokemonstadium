@@ -657,7 +657,7 @@ glabel func_800533DC
 /* 53FE4 800533E4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 53FE8 800533E8 3C048010 */  lui        $a0, 0x8010
 /* 53FEC 800533EC 24840650 */  addiu      $a0, $a0, 0x650
-/* 53FF0 800533F0 0C015AB4 */  jal        func_80056AD0
+/* 53FF0 800533F0 0C015AB4 */  jal        osRecvMesg
 /* 53FF4 800533F4 27A5001C */   addiu     $a1, $sp, 0x1c
 /* 53FF8 800533F8 14400008 */  bnez       $v0, .L8005341C
 /* 53FFC 800533FC 8FAE001C */   lw        $t6, 0x1c($sp)

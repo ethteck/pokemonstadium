@@ -859,7 +859,7 @@ glabel func_8003D160
 /* 3DD9C 8003D19C 02202025 */  or         $a0, $s1, $zero
 .L8003D1A0:
 /* 3DDA0 8003D1A0 02402825 */  or         $a1, $s2, $zero
-/* 3DDA4 8003D1A4 0C015AB4 */  jal        func_80056AD0
+/* 3DDA4 8003D1A4 0C015AB4 */  jal        osRecvMesg
 /* 3DDA8 8003D1A8 00003025 */   or        $a2, $zero, $zero
 /* 3DDAC 8003D1AC 8E8F0000 */  lw         $t7, ($s4)
 /* 3DDB0 8003D1B0 26100001 */  addiu      $s0, $s0, 1

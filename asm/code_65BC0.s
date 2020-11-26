@@ -142,7 +142,7 @@ glabel func_80065140
 /* 65DB4 800651B4 8EE4000C */  lw         $a0, 0xc($s7)
 .L800651B8:
 /* 65DB8 800651B8 02802825 */  or         $a1, $s4, $zero
-/* 65DBC 800651BC 0C015AB4 */  jal        func_80056AD0
+/* 65DBC 800651BC 0C015AB4 */  jal        osRecvMesg
 /* 65DC0 800651C0 24060001 */   addiu     $a2, $zero, 1
 /* 65DC4 800651C4 8FAE0044 */  lw         $t6, 0x44($sp)
 /* 65DC8 800651C8 95C30000 */  lhu        $v1, ($t6)

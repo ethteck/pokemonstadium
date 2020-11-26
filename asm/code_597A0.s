@@ -42,7 +42,7 @@ glabel func_80058BF0
 /* 59810 80058C10 3C048010 */  lui        $a0, 0x8010
 /* 59814 80058C14 248421D8 */  addiu      $a0, $a0, 0x21d8
 /* 59818 80058C18 27A5001C */  addiu      $a1, $sp, 0x1c
-/* 5981C 80058C1C 0C015AB4 */  jal        func_80056AD0
+/* 5981C 80058C1C 0C015AB4 */  jal        osRecvMesg
 /* 59820 80058C20 24060001 */   addiu     $a2, $zero, 1
 /* 59824 80058C24 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 59828 80058C28 27BD0020 */  addiu      $sp, $sp, 0x20

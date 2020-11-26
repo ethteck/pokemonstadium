@@ -81,7 +81,7 @@ glabel func_8004ADB0
 /* 4BA38 8004AE38 00003025 */   or        $a2, $zero, $zero
 /* 4BA3C 8004AE3C 02802025 */  or         $a0, $s4, $zero
 /* 4BA40 8004AE40 00002825 */  or         $a1, $zero, $zero
-/* 4BA44 8004AE44 0C015AB4 */  jal        func_80056AD0
+/* 4BA44 8004AE44 0C015AB4 */  jal        osRecvMesg
 /* 4BA48 8004AE48 24060001 */   addiu     $a2, $zero, 1
 /* 4BA4C 8004AE4C 02308823 */  subu       $s1, $s1, $s0
 /* 4BA50 8004AE50 02709821 */  addu       $s3, $s3, $s0

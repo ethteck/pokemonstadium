@@ -1601,7 +1601,7 @@ glabel func_8002EF18
 /* 2FB20 8002EF20 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 2FB24 8002EF24 3C04800B */  lui        $a0, 0x800b
 /* 2FB28 8002EF28 2484F750 */  addiu      $a0, $a0, -0x8b0
-/* 2FB2C 8002EF2C 0C015AB4 */  jal        func_80056AD0
+/* 2FB2C 8002EF2C 0C015AB4 */  jal        osRecvMesg
 /* 2FB30 8002EF30 24060001 */   addiu     $a2, $zero, 1
 /* 2FB34 8002EF34 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 2FB38 8002EF38 27BD0018 */  addiu      $sp, $sp, 0x18

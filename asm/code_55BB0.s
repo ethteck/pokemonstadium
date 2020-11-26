@@ -165,7 +165,7 @@ glabel func_800551B0
 /* 55DD0 800551D0 AFB00014 */  sw         $s0, 0x14($sp)
 /* 55DD4 800551D4 02402025 */  or         $a0, $s2, $zero
 /* 55DD8 800551D8 02602825 */  or         $a1, $s3, $zero
-/* 55DDC 800551DC 0C015AB4 */  jal        func_80056AD0
+/* 55DDC 800551DC 0C015AB4 */  jal        osRecvMesg
 /* 55DE0 800551E0 00003025 */   or        $a2, $zero, $zero
 /* 55DE4 800551E4 14400015 */  bnez       $v0, .L8005523C
 /* 55DE8 800551E8 24110002 */   addiu     $s1, $zero, 2
@@ -187,7 +187,7 @@ glabel func_800551B0
 /* 55E24 80055224 02402025 */  or         $a0, $s2, $zero
 .L80055228:
 /* 55E28 80055228 02602825 */  or         $a1, $s3, $zero
-/* 55E2C 8005522C 0C015AB4 */  jal        func_80056AD0
+/* 55E2C 8005522C 0C015AB4 */  jal        osRecvMesg
 /* 55E30 80055230 00003025 */   or        $a2, $zero, $zero
 /* 55E34 80055234 5040FFEF */  beql       $v0, $zero, .L800551F4
 /* 55E38 80055238 8FAE002C */   lw        $t6, 0x2c($sp)

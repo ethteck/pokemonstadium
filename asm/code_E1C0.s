@@ -208,7 +208,7 @@ glabel func_8000D8A8
 /* E4B4 8000D8B4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* E4B8 8000D8B8 27A5001C */  addiu      $a1, $sp, 0x1c
 /* E4BC 8000D8BC 24060001 */  addiu      $a2, $zero, 1
-/* E4C0 8000D8C0 0C015AB4 */  jal        func_80056AD0
+/* E4C0 8000D8C0 0C015AB4 */  jal        osRecvMesg
 /* E4C4 8000D8C4 248421E4 */   addiu     $a0, $a0, 0x21e4
 /* E4C8 8000D8C8 8FBF0014 */  lw         $ra, 0x14($sp)
 /* E4CC 8000D8CC 8FA2001C */  lw         $v0, 0x1c($sp)

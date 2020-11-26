@@ -57,7 +57,7 @@ glabel func_8005E450
 /* 5F100 8005E500 3C048010 */  lui        $a0, 0x8010
 /* 5F104 8005E504 248421A8 */  addiu      $a0, $a0, 0x21a8
 /* 5F108 8005E508 00002825 */  or         $a1, $zero, $zero
-/* 5F10C 8005E50C 0C015AB4 */  jal        func_80056AD0
+/* 5F10C 8005E50C 0C015AB4 */  jal        osRecvMesg
 /* 5F110 8005E510 24060001 */   addiu     $a2, $zero, 1
 /* 5F114 8005E514 8FB8003C */  lw         $t8, 0x3c($sp)
 /* 5F118 8005E518 1F00FFD6 */  bgtz       $t8, .L8005E474

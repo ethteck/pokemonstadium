@@ -666,7 +666,7 @@ glabel func_8000CB18
 /* D7CC 8000CBCC 24848308 */  addiu      $a0, $a0, -0x7cf8
 /* D7D0 8000CBD0 00002825 */  or         $a1, $zero, $zero
 /* D7D4 8000CBD4 24060001 */  addiu      $a2, $zero, 1
-/* D7D8 8000CBD8 0C015AB4 */  jal        func_80056AD0
+/* D7D8 8000CBD8 0C015AB4 */  jal        osRecvMesg
 /* D7DC 8000CBDC 00000000 */   nop       
 /* D7E0 8000CBE0 3C08800B */  lui        $t0, 0x800b
 /* D7E4 8000CBE4 250882E0 */  addiu      $t0, $t0, -0x7d20

@@ -1,13 +1,4 @@
-.include "macro.inc"
-
-# assembler directives
-.set noat      # allow manual use of $at
-.set noreorder # don't insert nops after branches
-.set gp=64     # allow use of 64-bit general purpose registers
-
-.section .text, "ax"
-
-glabel func_80056AD0
+glabel osRecvMesg
 /* 576D0 80056AD0 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 576D4 80056AD4 AFBF001C */  sw         $ra, 0x1c($sp)
 /* 576D8 80056AD8 AFA40028 */  sw         $a0, 0x28($sp)

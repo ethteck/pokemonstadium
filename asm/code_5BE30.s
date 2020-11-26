@@ -59,7 +59,7 @@ glabel func_8005B2A0
 /* 5BEDC 8005B2DC AFA2003C */  sw         $v0, 0x3c($sp)
 /* 5BEE0 8005B2E0 8FA40040 */  lw         $a0, 0x40($sp)
 /* 5BEE4 8005B2E4 27A50038 */  addiu      $a1, $sp, 0x38
-/* 5BEE8 8005B2E8 0C015AB4 */  jal        func_80056AD0
+/* 5BEE8 8005B2E8 0C015AB4 */  jal        osRecvMesg
 /* 5BEEC 8005B2EC 24060001 */   addiu     $a2, $zero, 1
 /* 5BEF0 8005B2F0 3C058010 */  lui        $a1, 0x8010
 /* 5BEF4 8005B2F4 24A523F0 */  addiu      $a1, $a1, 0x23f0
@@ -68,7 +68,7 @@ glabel func_8005B2A0
 /* 5BF00 8005B300 AFA2003C */  sw         $v0, 0x3c($sp)
 /* 5BF04 8005B304 8FA40040 */  lw         $a0, 0x40($sp)
 /* 5BF08 8005B308 27A50038 */  addiu      $a1, $sp, 0x38
-/* 5BF0C 8005B30C 0C015AB4 */  jal        func_80056AD0
+/* 5BF0C 8005B30C 0C015AB4 */  jal        osRecvMesg
 /* 5BF10 8005B310 24060001 */   addiu     $a2, $zero, 1
 /* 5BF14 8005B314 27A40037 */  addiu      $a0, $sp, 0x37
 /* 5BF18 8005B318 0C016D44 */  jal        func_8005B510

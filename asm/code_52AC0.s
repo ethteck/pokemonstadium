@@ -74,7 +74,7 @@ glabel func_80051EC0
 /* 52BB4 80051FB4 3C048010 */  lui        $a0, 0x8010
 /* 52BB8 80051FB8 24840638 */  addiu      $a0, $a0, 0x638
 /* 52BBC 80051FBC 02202825 */  or         $a1, $s1, $zero
-/* 52BC0 80051FC0 0C015AB4 */  jal        func_80056AD0
+/* 52BC0 80051FC0 0C015AB4 */  jal        osRecvMesg
 /* 52BC4 80051FC4 24060001 */   addiu     $a2, $zero, 1
 /* 52BC8 80051FC8 8E230000 */  lw         $v1, ($s1)
 /* 52BCC 80051FCC 3C018010 */  lui        $at, 0x8010
@@ -89,7 +89,7 @@ glabel func_80051EC0
 /* 52BF0 80051FF0 3C048010 */  lui        $a0, 0x8010
 /* 52BF4 80051FF4 24840650 */  addiu      $a0, $a0, 0x650
 /* 52BF8 80051FF8 00002825 */  or         $a1, $zero, $zero
-/* 52BFC 80051FFC 0C015AB4 */  jal        func_80056AD0
+/* 52BFC 80051FFC 0C015AB4 */  jal        osRecvMesg
 /* 52C00 80052000 00003025 */   or        $a2, $zero, $zero
 /* 52C04 80052004 1000FFEB */  b          .L80051FB4
 /* 52C08 80052008 00000000 */   nop       

@@ -177,7 +177,7 @@ glabel func_8000DED0
 /* EAD8 8000DED8 3C04800B */  lui        $a0, 0x800b
 /* EADC 8000DEDC 2484A698 */  addiu      $a0, $a0, -0x5968
 /* EAE0 8000DEE0 27A5001C */  addiu      $a1, $sp, 0x1c
-/* EAE4 8000DEE4 0C015AB4 */  jal        func_80056AD0
+/* EAE4 8000DEE4 0C015AB4 */  jal        osRecvMesg
 /* EAE8 8000DEE8 00003025 */   or        $a2, $zero, $zero
 /* EAEC 8000DEEC 2401FFFF */  addiu      $at, $zero, -1
 /* EAF0 8000DEF0 5041007A */  beql       $v0, $at, .L8000E0DC
@@ -320,7 +320,7 @@ glabel func_8000E0EC
 /* ECF4 8000E0F4 3C04800B */  lui        $a0, 0x800b
 /* ECF8 8000E0F8 2484A698 */  addiu      $a0, $a0, -0x5968
 /* ECFC 8000E0FC 27A5001C */  addiu      $a1, $sp, 0x1c
-/* ED00 8000E100 0C015AB4 */  jal        func_80056AD0
+/* ED00 8000E100 0C015AB4 */  jal        osRecvMesg
 /* ED04 8000E104 00003025 */   or        $a2, $zero, $zero
 /* ED08 8000E108 2401FFFF */  addiu      $at, $zero, -1
 /* ED0C 8000E10C 1041003E */  beq        $v0, $at, .L8000E208
@@ -407,7 +407,7 @@ glabel func_8000E21C
 /* EE28 8000E228 3C04800B */  lui        $a0, 0x800b
 /* EE2C 8000E22C 2484A698 */  addiu      $a0, $a0, -0x5968
 /* EE30 8000E230 27A50024 */  addiu      $a1, $sp, 0x24
-/* EE34 8000E234 0C015AB4 */  jal        func_80056AD0
+/* EE34 8000E234 0C015AB4 */  jal        osRecvMesg
 /* EE38 8000E238 00003025 */   or        $a2, $zero, $zero
 /* EE3C 8000E23C 2401FFFF */  addiu      $at, $zero, -1
 /* EE40 8000E240 10410057 */  beq        $v0, $at, .L8000E3A0
@@ -517,7 +517,7 @@ glabel func_8000E3B4
 /* EFBC 8000E3BC 3C04800B */  lui        $a0, 0x800b
 /* EFC0 8000E3C0 2484A698 */  addiu      $a0, $a0, -0x5968
 /* EFC4 8000E3C4 27A5001C */  addiu      $a1, $sp, 0x1c
-/* EFC8 8000E3C8 0C015AB4 */  jal        func_80056AD0
+/* EFC8 8000E3C8 0C015AB4 */  jal        osRecvMesg
 /* EFCC 8000E3CC 00003025 */   or        $a2, $zero, $zero
 /* EFD0 8000E3D0 2401FFFF */  addiu      $at, $zero, -1
 /* EFD4 8000E3D4 1041004C */  beq        $v0, $at, .L8000E508
@@ -780,7 +780,7 @@ glabel func_8000E760
 /* F378 8000E778 3C04800B */  lui        $a0, 0x800b
 /* F37C 8000E77C 2484A698 */  addiu      $a0, $a0, -0x5968
 /* F380 8000E780 00002825 */  or         $a1, $zero, $zero
-/* F384 8000E784 0C015AB4 */  jal        func_80056AD0
+/* F384 8000E784 0C015AB4 */  jal        osRecvMesg
 /* F388 8000E788 24060001 */   addiu     $a2, $zero, 1
 /* F38C 8000E78C 240E0002 */  addiu      $t6, $zero, 2
 /* F390 8000E790 3C01800B */  lui        $at, 0x800b
@@ -797,7 +797,7 @@ glabel func_8000E760
 .L8000E7B8:
 /* F3B8 8000E7B8 2484A698 */   addiu     $a0, $a0, -0x5968
 /* F3BC 8000E7BC 00002825 */  or         $a1, $zero, $zero
-/* F3C0 8000E7C0 0C015AB4 */  jal        func_80056AD0
+/* F3C0 8000E7C0 0C015AB4 */  jal        osRecvMesg
 /* F3C4 8000E7C4 24060001 */   addiu     $a2, $zero, 1
 /* F3C8 8000E7C8 240F0004 */  addiu      $t7, $zero, 4
 /* F3CC 8000E7CC 3C01800B */  lui        $at, 0x800b
