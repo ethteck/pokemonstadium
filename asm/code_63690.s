@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80062A90
+glabel __osDisableInt
 /* 63690 80062A90 3C0A8008 */  lui        $t2, 0x8008
 /* 63694 80062A94 254A96B0 */  addiu      $t2, $t2, -0x6950
 /* 63698 80062A98 8D4B0000 */  lw         $t3, ($t2)
@@ -20,8 +20,8 @@ glabel func_80062A90
 /* 636B4 80062AB4 8D480000 */  lw         $t0, ($t2)
 /* 636B8 80062AB8 3108FF00 */  andi       $t0, $t0, 0xff00
 /* 636BC 80062ABC 110B000E */  beq        $t0, $t3, .L80062AF8
-/* 636C0 80062AC0 3C0A8008 */   lui       $t2, 0x8008
-/* 636C4 80062AC4 254A9630 */  addiu      $t2, $t2, -0x69d0
+/* 636C0 80062AC0 3C0A8008 */   lui       $t2, %hi(__osRunningThread)
+/* 636C4 80062AC4 254A9630 */  addiu      $t2, $t2, %lo(__osRunningThread)
 /* 636C8 80062AC8 8D490118 */  lw         $t1, 0x118($t2)
 /* 636CC 80062ACC 312AFF00 */  andi       $t2, $t1, 0xff00
 /* 636D0 80062AD0 01485024 */  and        $t2, $t2, $t0
@@ -38,7 +38,7 @@ glabel func_80062A90
 /* 636F8 80062AF8 03E00008 */  jr         $ra
 /* 636FC 80062AFC 00000000 */   nop       
 
-glabel func_80062B00
+glabel __osRestoreInt
 /* 63700 80062B00 40086000 */  mfc0       $t0, $12
 /* 63704 80062B04 01044025 */  or         $t0, $t0, $a0
 /* 63708 80062B08 40886000 */  mtc0       $t0, $12

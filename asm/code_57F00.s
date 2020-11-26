@@ -13,14 +13,14 @@ glabel func_80057300
 /* 57F08 80057308 AFA40038 */  sw         $a0, 0x38($sp)
 /* 57F0C 8005730C AFB20020 */  sw         $s2, 0x20($sp)
 /* 57F10 80057310 AFB1001C */  sw         $s1, 0x1c($sp)
-/* 57F14 80057314 0C018AA4 */  jal        func_80062A90
+/* 57F14 80057314 0C018AA4 */  jal        __osDisableInt
 /* 57F18 80057318 AFB00018 */   sw        $s0, 0x18($sp)
 /* 57F1C 8005731C 8FAE0038 */  lw         $t6, 0x38($sp)
 /* 57F20 80057320 00408025 */  or         $s0, $v0, $zero
 /* 57F24 80057324 15C00005 */  bnez       $t6, .L8005733C
 /* 57F28 80057328 00000000 */   nop       
-/* 57F2C 8005732C 3C0F8008 */  lui        $t7, 0x8008
-/* 57F30 80057330 8DEF9630 */  lw         $t7, -0x69d0($t7)
+/* 57F2C 8005732C 3C0F8008 */  lui        $t7, %hi(__osRunningThread)
+/* 57F30 80057330 8DEF9630 */  lw         $t7, %lo(__osRunningThread)($t7)
 /* 57F34 80057334 10000009 */  b          .L8005735C
 /* 57F38 80057338 AFAF0038 */   sw        $t7, 0x38($sp)
 .L8005733C:
@@ -64,15 +64,15 @@ glabel func_80057300
 /* 57FC0 800573C0 15C1FFF5 */  bne        $t6, $at, .L80057398
 /* 57FC4 800573C4 00000000 */   nop       
 .L800573C8:
-/* 57FC8 800573C8 3C198008 */  lui        $t9, 0x8008
-/* 57FCC 800573CC 8F399630 */  lw         $t9, -0x69d0($t9)
+/* 57FC8 800573C8 3C198008 */  lui        $t9, %hi(__osRunningThread)
+/* 57FCC 800573CC 8F399630 */  lw         $t9, %lo(__osRunningThread)($t9)
 /* 57FD0 800573D0 8FAF0038 */  lw         $t7, 0x38($sp)
 /* 57FD4 800573D4 15F90003 */  bne        $t7, $t9, .L800573E4
 /* 57FD8 800573D8 00000000 */   nop       
-/* 57FDC 800573DC 0C015F91 */  jal        func_80057E44
+/* 57FDC 800573DC 0C015F91 */  jal        __osDispatchThread
 /* 57FE0 800573E0 00000000 */   nop       
 .L800573E4:
-/* 57FE4 800573E4 0C018AC0 */  jal        func_80062B00
+/* 57FE4 800573E4 0C018AC0 */  jal        __osRestoreInt
 /* 57FE8 800573E8 02002025 */   or        $a0, $s0, $zero
 /* 57FEC 800573EC 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 57FF0 800573F0 8FB00018 */  lw         $s0, 0x18($sp)

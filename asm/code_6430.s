@@ -377,7 +377,7 @@ glabel func_80005D48
 /* 6950 80005D50 3C04800A */  lui        $a0, 0x800a
 /* 6954 80005D54 24847400 */  addiu      $a0, $a0, 0x7400
 /* 6958 80005D58 00002825 */  or         $a1, $zero, $zero
-/* 695C 80005D5C 0C015A30 */  jal        func_800568C0
+/* 695C 80005D5C 0C015A30 */  jal        osSendMesg
 /* 6960 80005D60 00003025 */   or        $a2, $zero, $zero
 /* 6964 80005D64 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 6968 80005D68 27BD0018 */  addiu      $sp, $sp, 0x18
@@ -396,7 +396,7 @@ glabel func_80005D74
 /* 6994 80005D94 3C04800A */  lui        $a0, 0x800a
 /* 6998 80005D98 24847400 */  addiu      $a0, $a0, 0x7400
 /* 699C 80005D9C 00002825 */  or         $a1, $zero, $zero
-/* 69A0 80005DA0 0C015A30 */  jal        func_800568C0
+/* 69A0 80005DA0 0C015A30 */  jal        osSendMesg
 /* 69A4 80005DA4 00003025 */   or        $a2, $zero, $zero
 /* 69A8 80005DA8 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 69AC 80005DAC 27BD0018 */  addiu      $sp, $sp, 0x18

@@ -188,14 +188,14 @@ glabel func_80065E44
 glabel func_80065ED0
 /* 66AD0 80065ED0 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 66AD4 80065ED4 AFBF001C */  sw         $ra, 0x1c($sp)
-/* 66AD8 80065ED8 0C018AA4 */  jal        func_80062A90
+/* 66AD8 80065ED8 0C018AA4 */  jal        __osDisableInt
 /* 66ADC 80065EDC AFB00018 */   sw        $s0, 0x18($sp)
 /* 66AE0 80065EE0 3C0E8008 */  lui        $t6, 0x8008
 /* 66AE4 80065EE4 8DCEACF0 */  lw         $t6, -0x5310($t6)
 /* 66AE8 80065EE8 00408025 */  or         $s0, $v0, $zero
 /* 66AEC 80065EEC 02002025 */  or         $a0, $s0, $zero
 /* 66AF0 80065EF0 8DCF0004 */  lw         $t7, 4($t6)
-/* 66AF4 80065EF4 0C018AC0 */  jal        func_80062B00
+/* 66AF4 80065EF4 0C018AC0 */  jal        __osRestoreInt
 /* 66AF8 80065EF8 AFAF0020 */   sw        $t7, 0x20($sp)
 /* 66AFC 80065EFC 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 66B00 80065F00 8FA20020 */  lw         $v0, 0x20($sp)

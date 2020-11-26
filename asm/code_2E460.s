@@ -1569,7 +1569,7 @@ glabel func_8002EEA8
 /* 2FAB0 8002EEB0 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 2FAB4 8002EEB4 3C04800B */  lui        $a0, 0x800b
 /* 2FAB8 8002EEB8 2484F750 */  addiu      $a0, $a0, -0x8b0
-/* 2FABC 8002EEBC 0C015A30 */  jal        func_800568C0
+/* 2FABC 8002EEBC 0C015A30 */  jal        osSendMesg
 /* 2FAC0 8002EEC0 24060001 */   addiu     $a2, $zero, 1
 /* 2FAC4 8002EEC4 0C0016A1 */  jal        func_80005A84
 /* 2FAC8 8002EEC8 00000000 */   nop       
@@ -1588,7 +1588,7 @@ glabel func_8002EEEC
 /* 2FAF4 8002EEF4 3C04800B */  lui        $a0, 0x800b
 /* 2FAF8 8002EEF8 2484F750 */  addiu      $a0, $a0, -0x8b0
 /* 2FAFC 8002EEFC 00002825 */  or         $a1, $zero, $zero
-/* 2FB00 8002EF00 0C015A30 */  jal        func_800568C0
+/* 2FB00 8002EF00 0C015A30 */  jal        osSendMesg
 /* 2FB04 8002EF04 24060001 */   addiu     $a2, $zero, 1
 /* 2FB08 8002EF08 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 2FB0C 8002EF0C 27BD0018 */  addiu      $sp, $sp, 0x18

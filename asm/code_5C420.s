@@ -148,7 +148,7 @@ glabel func_8005B820
 /* 5C628 8005BA28 8FA50074 */  lw         $a1, 0x74($sp)
 .L8005BA2C:
 /* 5C62C 8005BA2C 00003025 */  or         $a2, $zero, $zero
-/* 5C630 8005BA30 0C015A30 */  jal        func_800568C0
+/* 5C630 8005BA30 0C015A30 */  jal        osSendMesg
 /* 5C634 8005BA34 8CA40004 */   lw        $a0, 4($a1)
 /* 5C638 8005BA38 16570007 */  bne        $s2, $s7, .L8005BA58
 /* 5C63C 8005BA3C 8FAC0074 */   lw        $t4, 0x74($sp)
@@ -162,7 +162,7 @@ glabel func_8005B820
 /* 5C658 8005BA58 8E840010 */  lw         $a0, 0x10($s4)
 .L8005BA5C:
 /* 5C65C 8005BA5C 00002825 */  or         $a1, $zero, $zero
-/* 5C660 8005BA60 0C015A30 */  jal        func_800568C0
+/* 5C660 8005BA60 0C015A30 */  jal        osSendMesg
 /* 5C664 8005BA64 00003025 */   or        $a2, $zero, $zero
 /* 5C668 8005BA68 8FAF0074 */  lw         $t7, 0x74($sp)
 /* 5C66C 8005BA6C 8DF80014 */  lw         $t8, 0x14($t7)
@@ -245,7 +245,7 @@ glabel func_8005B820
 /* 5C79C 8005BB9C 8FA50074 */  lw         $a1, 0x74($sp)
 /* 5C7A0 8005BBA0 00003025 */  or         $a2, $zero, $zero
 /* 5C7A4 8005BBA4 2410FFFF */  addiu      $s0, $zero, -1
-/* 5C7A8 8005BBA8 0C015A30 */  jal        func_800568C0
+/* 5C7A8 8005BBA8 0C015A30 */  jal        osSendMesg
 /* 5C7AC 8005BBAC 8CA40004 */   lw        $a0, 4($a1)
 /* 5C7B0 8005BBB0 10000002 */  b          .L8005BBBC
 /* 5C7B4 8005BBB4 00000000 */   nop       
@@ -259,11 +259,11 @@ glabel func_8005B820
 /* 5C7CC 8005BBCC 02E03025 */   or        $a2, $s7, $zero
 /* 5C7D0 8005BBD0 8FA50074 */  lw         $a1, 0x74($sp)
 /* 5C7D4 8005BBD4 00003025 */  or         $a2, $zero, $zero
-/* 5C7D8 8005BBD8 0C015A30 */  jal        func_800568C0
+/* 5C7D8 8005BBD8 0C015A30 */  jal        osSendMesg
 /* 5C7DC 8005BBDC 8CA40004 */   lw        $a0, 4($a1)
 /* 5C7E0 8005BBE0 8E840010 */  lw         $a0, 0x10($s4)
 /* 5C7E4 8005BBE4 00002825 */  or         $a1, $zero, $zero
-/* 5C7E8 8005BBE8 0C015A30 */  jal        func_800568C0
+/* 5C7E8 8005BBE8 0C015A30 */  jal        osSendMesg
 /* 5C7EC 8005BBEC 00003025 */   or        $a2, $zero, $zero
 /* 5C7F0 8005BBF0 1000FF1F */  b          .L8005B870
 /* 5C7F4 8005BBF4 8E840008 */   lw        $a0, 8($s4)

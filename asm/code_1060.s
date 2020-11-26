@@ -43,7 +43,7 @@ glabel func_80000460
 /* 10E0 800004E0 0C016330 */  jal        func_80058CC0
 /* 10E4 800004E4 00003825 */   or        $a3, $zero, $zero
 /* 10E8 800004E8 3C048008 */  lui        $a0, 0x8008
-/* 10EC 800004EC 0C0194DC */  jal        func_80065370
+/* 10EC 800004EC 0C0194DC */  jal        osStartThread
 /* 10F0 800004F0 2484F730 */   addiu     $a0, $a0, -0x8d0
 /* 10F4 800004F4 00002025 */  or         $a0, $zero, $zero
 /* 10F8 800004F8 0C0179E4 */  jal        func_8005E790
@@ -86,7 +86,7 @@ glabel func_80000530
 /* 1180 80000580 0C016330 */  jal        func_80058CC0
 /* 1184 80000584 00003825 */   or        $a3, $zero, $zero
 /* 1188 80000588 3C048008 */  lui        $a0, 0x8008
-/* 118C 8000058C 0C0194DC */  jal        func_80065370
+/* 118C 8000058C 0C0194DC */  jal        osStartThread
 /* 1190 80000590 2484F180 */   addiu     $a0, $a0, -0xe80
 /* 1194 80000594 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 1198 80000598 27BD0020 */  addiu      $sp, $sp, 0x20

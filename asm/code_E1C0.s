@@ -85,7 +85,7 @@ glabel func_8000D678
 /* E2DC 8000D6DC 0220F809 */  jalr       $s1
 /* E2E0 8000D6E0 8E040000 */   lw        $a0, ($s0)
 /* E2E4 8000D6E4 3C04800B */  lui        $a0, 0x800b
-/* E2E8 8000D6E8 0C0194DC */  jal        func_80065370
+/* E2E8 8000D6E8 0C0194DC */  jal        osStartThread
 /* E2EC 8000D6EC 8C84A664 */   lw        $a0, -0x599c($a0)
 /* E2F0 8000D6F0 3C11800A */  lui        $s1, 0x800a
 /* E2F4 8000D6F4 263162E0 */  addiu      $s1, $s1, 0x62e0
@@ -193,7 +193,7 @@ glabel func_8000D738
 /* E480 8000D880 00002025 */   or        $a0, $zero, $zero
 /* E484 8000D884 3C01800B */  lui        $at, 0x800b
 /* E488 8000D888 A022A668 */  sb         $v0, -0x5998($at)
-/* E48C 8000D88C 0C0194DC */  jal        func_80065370
+/* E48C 8000D88C 0C0194DC */  jal        osStartThread
 /* E490 8000D890 8E240000 */   lw        $a0, ($s1)
 /* E494 8000D894 8FBF0024 */  lw         $ra, 0x24($sp)
 /* E498 8000D898 8FB0001C */  lw         $s0, 0x1c($sp)

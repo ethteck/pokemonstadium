@@ -211,12 +211,12 @@ glabel func_8000D3A8
 /* E05C 8000D45C 3C05444F */  lui        $a1, 0x444f
 /* E060 8000D460 34A54E45 */  ori        $a1, $a1, 0x4e45
 /* E064 8000D464 02202025 */  or         $a0, $s1, $zero
-/* E068 8000D468 0C015A30 */  jal        func_800568C0
+/* E068 8000D468 0C015A30 */  jal        osSendMesg
 /* E06C 8000D46C 00003025 */   or        $a2, $zero, $zero
 /* E070 8000D470 3C05444F */  lui        $a1, 0x444f
 /* E074 8000D474 34A54E45 */  ori        $a1, $a1, 0x4e45
 /* E078 8000D478 02602025 */  or         $a0, $s3, $zero
-/* E07C 8000D47C 0C015A30 */  jal        func_800568C0
+/* E07C 8000D47C 0C015A30 */  jal        osSendMesg
 /* E080 8000D480 00003025 */   or        $a2, $zero, $zero
 /* E084 8000D484 0C00DCF6 */  jal        func_800373D8
 /* E088 8000D488 00000000 */   nop       
@@ -293,7 +293,7 @@ glabel func_8000D564
 /* E194 8000D594 0C016330 */  jal        func_80058CC0
 /* E198 8000D598 00003825 */   or        $a3, $zero, $zero
 /* E19C 8000D59C 3C04800B */  lui        $a0, 0x800b
-/* E1A0 8000D5A0 0C0194DC */  jal        func_80065370
+/* E1A0 8000D5A0 0C0194DC */  jal        osStartThread
 /* E1A4 8000D5A4 24848480 */   addiu     $a0, $a0, -0x7b80
 /* E1A8 8000D5A8 8FBF001C */  lw         $ra, 0x1c($sp)
 /* E1AC 8000D5AC 27BD0020 */  addiu      $sp, $sp, 0x20

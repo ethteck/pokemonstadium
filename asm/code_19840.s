@@ -742,7 +742,7 @@ glabel func_80019600
 /* 1A28C 8001968C 5080FFEC */  beql       $a0, $zero, .L80019640
 /* 1A290 80019690 02002025 */   or        $a0, $s0, $zero
 /* 1A294 80019694 01E02825 */  or         $a1, $t7, $zero
-/* 1A298 80019698 0C015A30 */  jal        func_800568C0
+/* 1A298 80019698 0C015A30 */  jal        osSendMesg
 /* 1A29C 8001969C 02403025 */   or        $a2, $s2, $zero
 /* 1A2A0 800196A0 1000FFE7 */  b          .L80019640
 /* 1A2A4 800196A4 02002025 */   or        $a0, $s0, $zero
@@ -788,7 +788,7 @@ glabel func_800196DC
 /* 1A33C 8001973C 0C016330 */  jal        func_80058CC0
 /* 1A340 80019740 00003825 */   or        $a3, $zero, $zero
 /* 1A344 80019744 3C04800B */  lui        $a0, 0x800b
-/* 1A348 80019748 0C0194DC */  jal        func_80065370
+/* 1A348 80019748 0C0194DC */  jal        osStartThread
 /* 1A34C 8001974C 2484BE10 */   addiu     $a0, $a0, -0x41f0
 /* 1A350 80019750 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 1A354 80019754 27BD0020 */  addiu      $sp, $sp, 0x20
@@ -961,7 +961,7 @@ glabel func_800198E4
 /* 1A5C4 800199C4 00000000 */   nop       
 /* 1A5C8 800199C8 8CA40004 */  lw         $a0, 4($a1)
 /* 1A5CC 800199CC AFA70020 */  sw         $a3, 0x20($sp)
-/* 1A5D0 800199D0 0C015A30 */  jal        func_800568C0
+/* 1A5D0 800199D0 0C015A30 */  jal        osSendMesg
 /* 1A5D4 800199D4 24060001 */   addiu     $a2, $zero, 1
 /* 1A5D8 800199D8 10000007 */  b          .L800199F8
 /* 1A5DC 800199DC 8FA70020 */   lw        $a3, 0x20($sp)
@@ -969,7 +969,7 @@ glabel func_800198E4
 /* 1A5E0 800199E0 3C04800B */  lui        $a0, 0x800b
 /* 1A5E4 800199E4 2484C7E0 */  addiu      $a0, $a0, -0x3820
 /* 1A5E8 800199E8 8FA50018 */  lw         $a1, 0x18($sp)
-/* 1A5EC 800199EC 0C015A30 */  jal        func_800568C0
+/* 1A5EC 800199EC 0C015A30 */  jal        osSendMesg
 /* 1A5F0 800199F0 AFA70020 */   sw        $a3, 0x20($sp)
 /* 1A5F4 800199F4 8FA70020 */  lw         $a3, 0x20($sp)
 .L800199F8:
@@ -1053,7 +1053,7 @@ glabel func_80019A7C
 /* 1A70C 80019B0C AC4D0014 */  sw         $t5, 0x14($v0)
 /* 1A710 80019B10 24060001 */  addiu      $a2, $zero, 1
 /* 1A714 80019B14 AC4C0010 */  sw         $t4, 0x10($v0)
-/* 1A718 80019B18 0C015A30 */  jal        func_800568C0
+/* 1A718 80019B18 0C015A30 */  jal        osSendMesg
 /* 1A71C 80019B1C AFA70020 */   sw        $a3, 0x20($sp)
 /* 1A720 80019B20 8FA70020 */  lw         $a3, 0x20($sp)
 /* 1A724 80019B24 24030001 */  addiu      $v1, $zero, 1

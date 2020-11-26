@@ -943,7 +943,7 @@ glabel func_80008F7C
 /* 9BFC 80008FFC 0C016330 */  jal        func_80058CC0
 /* 9C00 80009000 00003825 */   or        $a3, $zero, $zero
 /* 9C04 80009004 3C04800A */  lui        $a0, 0x800a
-/* 9C08 80009008 0C0194DC */  jal        func_80065370
+/* 9C08 80009008 0C0194DC */  jal        osStartThread
 /* 9C0C 8000900C 248474C0 */   addiu     $a0, $a0, 0x74c0
 /* 9C10 80009010 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 9C14 80009014 27BD0020 */  addiu      $sp, $sp, 0x20

@@ -124,7 +124,7 @@ glabel func_8005F26C
 /* 5FF8C 8005F38C 00000000 */   nop       
 /* 5FF90 8005F390 01C02025 */  or         $a0, $t6, $zero
 /* 5FF94 8005F394 8F25001C */  lw         $a1, 0x1c($t9)
-/* 5FF98 8005F398 0C015A30 */  jal        func_800568C0
+/* 5FF98 8005F398 0C015A30 */  jal        osSendMesg
 /* 5FF9C 8005F39C 00003025 */   or        $a2, $zero, $zero
 .L8005F3A0:
 /* 5FFA0 8005F3A0 8FAF0024 */  lw         $t7, 0x24($sp)
@@ -151,7 +151,7 @@ glabel func_8005F3E4
 /* 5FFE4 8005F3E4 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 5FFE8 8005F3E8 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 5FFEC 8005F3EC AFA40028 */  sw         $a0, 0x28($sp)
-/* 5FFF0 8005F3F0 0C018AA4 */  jal        func_80062A90
+/* 5FFF0 8005F3F0 0C018AA4 */  jal        __osDisableInt
 /* 5FFF4 8005F3F4 AFA5002C */   sw        $a1, 0x2c($sp)
 /* 5FFF8 8005F3F8 0C016F40 */  jal        func_8005BD00
 /* 5FFFC 8005F3FC AFA2001C */   sw        $v0, 0x1c($sp)
@@ -171,7 +171,7 @@ glabel func_8005F3E4
 /* 60034 8005F434 AFAB0024 */  sw         $t3, 0x24($sp)
 /* 60038 8005F438 0C01892C */  jal        func_800624B0
 /* 6003C 8005F43C 01602025 */   or        $a0, $t3, $zero
-/* 60040 8005F440 0C018AC0 */  jal        func_80062B00
+/* 60040 8005F440 0C018AC0 */  jal        __osRestoreInt
 /* 60044 8005F444 8FA4001C */   lw        $a0, 0x1c($sp)
 /* 60048 8005F448 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 6004C 8005F44C 27BD0028 */  addiu      $sp, $sp, 0x28
@@ -181,7 +181,7 @@ glabel func_8005F3E4
 glabel func_8005F458
 /* 60058 8005F458 27BDFFC8 */  addiu      $sp, $sp, -0x38
 /* 6005C 8005F45C AFBF0014 */  sw         $ra, 0x14($sp)
-/* 60060 8005F460 0C018AA4 */  jal        func_80062A90
+/* 60060 8005F460 0C018AA4 */  jal        __osDisableInt
 /* 60064 8005F464 AFA40038 */   sw        $a0, 0x38($sp)
 /* 60068 8005F468 3C0E8008 */  lui        $t6, 0x8008
 /* 6006C 8005F46C 8DCEA9B0 */  lw         $t6, -0x5650($t6)
@@ -273,7 +273,7 @@ glabel func_8005F458
 /* 601B8 8005F5B8 8FAA0034 */  lw         $t2, 0x34($sp)
 /* 601BC 8005F5BC 8FA90038 */  lw         $t1, 0x38($sp)
 /* 601C0 8005F5C0 AD490004 */  sw         $t1, 4($t2)
-/* 601C4 8005F5C4 0C018AC0 */  jal        func_80062B00
+/* 601C4 8005F5C4 0C018AC0 */  jal        __osRestoreInt
 /* 601C8 8005F5C8 8FA40024 */   lw        $a0, 0x24($sp)
 /* 601CC 8005F5CC 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 601D0 8005F5D0 8FA20028 */  lw         $v0, 0x28($sp)

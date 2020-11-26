@@ -236,8 +236,8 @@ glabel func_800576E0
 /* 5830C 8005770C AF400018 */  sw         $zero, 0x18($k0)
 /* 58310 80057710 40086800 */  mfc0       $t0, $13
 /* 58314 80057714 03404025 */  or         $t0, $k0, $zero
-/* 58318 80057718 3C1A8008 */  lui        $k0, 0x8008
-/* 5831C 8005771C 8F5A9630 */  lw         $k0, -0x69d0($k0)
+/* 58318 80057718 3C1A8008 */  lui        $k0, %hi(__osRunningThread)
+/* 5831C 8005771C 8F5A9630 */  lw         $k0, %lo(__osRunningThread)($k0)
 /* 58320 80057720 DD090020 */  ld         $t1, 0x20($t0)
 /* 58324 80057724 FF490020 */  sd         $t1, 0x20($k0)
 /* 58328 80057728 DD090118 */  ld         $t1, 0x118($t0)
@@ -547,14 +547,14 @@ glabel func_800576E0
 /* 587A8 80057BA8 03402825 */  or         $a1, $k0, $zero
 /* 587AC 80057BAC 0C015F7B */  jal        func_80057DEC
 /* 587B0 80057BB0 24849628 */   addiu     $a0, $a0, -0x69d8
-/* 587B4 80057BB4 08015F91 */  j          .L80057E44
+/* 587B4 80057BB4 08015F91 */  j          __osDispatchThread
 /* 587B8 80057BB8 00000000 */   nop       
 .L80057BBC:
 /* 587BC 80057BBC 3C098008 */  lui        $t1, 0x8008
 /* 587C0 80057BC0 25299628 */  addiu      $t1, $t1, -0x69d8
 /* 587C4 80057BC4 8D2A0000 */  lw         $t2, ($t1)
 /* 587C8 80057BC8 AF4A0000 */  sw         $t2, ($k0)
-/* 587CC 80057BCC 08015F91 */  j          .L80057E44
+/* 587CC 80057BCC 08015F91 */  j          __osDispatchThread
 /* 587D0 80057BD0 AD3A0000 */   sw        $k0, ($t1)
 .L80057BD4:
 /* 587D4 80057BD4 3C018008 */  lui        $at, 0x8008
@@ -567,7 +567,7 @@ glabel func_800576E0
 /* 587F0 80057BF0 AF4A0124 */  sw         $t2, 0x124($k0)
 /* 587F4 80057BF4 0C015F01 */  jal        func_80057C04
 /* 587F8 80057BF8 24040060 */   addiu     $a0, $zero, 0x60
-/* 587FC 80057BFC 08015F91 */  j          .L80057E44
+/* 587FC 80057BFC 08015F91 */  j          __osDispatchThread
 /* 58800 80057C00 00000000 */   nop       
 /* 58804 80057C04 3C0A8010 */  lui        $t2, 0x8010
 /* 58808 80057C08 254A37F0 */  addiu      $t2, $t2, 0x37f0
@@ -607,7 +607,7 @@ glabel func_800576E0
 /* 58888 80057C88 8D4B0000 */  lw         $t3, ($t2)
 /* 5888C 80057C8C 11600008 */  beqz       $t3, .L80057CB0
 /* 58890 80057C90 00000000 */   nop       
-/* 58894 80057C94 0C015F8D */  jal        func_80057E34
+/* 58894 80057C94 0C015F8D */  jal        __osPopThread
 /* 58898 80057C98 01202025 */   or        $a0, $t1, $zero
 /* 5889C 80057C9C 00405025 */  or         $t2, $v0, $zero
 /* 588A0 80057CA0 3C048008 */  lui        $a0, 0x8008
@@ -631,8 +631,10 @@ glabel func_800576E0
 /* 588E0 80057CE0 AF490018 */  sw         $t1, 0x18($k0)
 /* 588E4 80057CE4 1000FFB5 */  b          .L80057BBC
 /* 588E8 80057CE8 AF5B0118 */   sw        $k1, 0x118($k0)
-/* 588EC 80057CEC 3C058008 */  lui        $a1, 0x8008
-/* 588F0 80057CF0 8CA59630 */  lw         $a1, -0x69d0($a1)
+
+glabel __osEnqueueAndYield
+/* 588EC 80057CEC 3C058008 */  lui        $a1, %hi(__osRunningThread)
+/* 588F0 80057CF0 8CA59630 */  lw         $a1, %lo(__osRunningThread)($a1)
 /* 588F4 80057CF4 40086000 */  mfc0       $t0, $12
 /* 588F8 80057CF8 8CBB0018 */  lw         $k1, 0x18($a1)
 /* 588FC 80057CFC 35080002 */  ori        $t0, $t0, 2
@@ -697,7 +699,7 @@ glabel func_800576E0
 /* 589DC 80057DDC 0C015F7B */  jal        func_80057DEC
 /* 589E0 80057DE0 00000000 */   nop       
 .L80057DE4:
-/* 589E4 80057DE4 08015F91 */  j          .L80057E44
+/* 589E4 80057DE4 08015F91 */  j          __osDispatchThread
 /* 589E8 80057DE8 00000000 */   nop       
 /* 589EC 80057DEC 8C980000 */  lw         $t8, ($a0)
 /* 589F0 80057DF0 8CAF0004 */  lw         $t7, 4($a1)
@@ -719,16 +721,19 @@ glabel func_800576E0
 /* 58A28 80057E28 AF250000 */  sw         $a1, ($t9)
 /* 58A2C 80057E2C 03E00008 */  jr         $ra
 /* 58A30 80057E30 ACA40008 */   sw        $a0, 8($a1)
+
+glabel __osPopThread
 /* 58A34 80057E34 8C820000 */  lw         $v0, ($a0)
 /* 58A38 80057E38 8C590000 */  lw         $t9, ($v0)
 /* 58A3C 80057E3C 03E00008 */  jr         $ra
 /* 58A40 80057E40 AC990000 */   sw        $t9, ($a0)
-.L80057E44:
+
+glabel __osDispatchThread
 /* 58A44 80057E44 3C048008 */  lui        $a0, 0x8008
-/* 58A48 80057E48 0C015F8D */  jal        func_80057E34
+/* 58A48 80057E48 0C015F8D */  jal        __osPopThread
 /* 58A4C 80057E4C 24849628 */   addiu     $a0, $a0, -0x69d8
-/* 58A50 80057E50 3C018008 */  lui        $at, 0x8008
-/* 58A54 80057E54 AC229630 */  sw         $v0, -0x69d0($at)
+/* 58A50 80057E50 3C018008 */  lui        $at, %hi(__osRunningThread)
+/* 58A54 80057E54 AC229630 */  sw         $v0, %lo(__osRunningThread)($at)
 /* 58A58 80057E58 24080004 */  addiu      $t0, $zero, 4
 /* 58A5C 80057E5C A4480010 */  sh         $t0, 0x10($v0)
 /* 58A60 80057E60 0040D025 */  or         $k0, $v0, $zero

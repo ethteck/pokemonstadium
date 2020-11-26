@@ -11,7 +11,7 @@ glabel func_8005A9E0
 /* 5B5E0 8005A9E0 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 5B5E4 8005A9E4 AFBF001C */  sw         $ra, 0x1c($sp)
 /* 5B5E8 8005A9E8 AFA40028 */  sw         $a0, 0x28($sp)
-/* 5B5EC 8005A9EC 0C018AA4 */  jal        func_80062A90
+/* 5B5EC 8005A9EC 0C018AA4 */  jal        __osDisableInt
 /* 5B5F0 8005A9F0 AFB00018 */   sw        $s0, 0x18($sp)
 /* 5B5F4 8005A9F4 93AE002B */  lbu        $t6, 0x2b($sp)
 /* 5B5F8 8005A9F8 00408025 */  or         $s0, $v0, $zero
@@ -31,7 +31,7 @@ glabel func_8005A9E0
 /* 5B62C 8005AA2C 01215024 */  and        $t2, $t1, $at
 /* 5B630 8005AA30 A50A0000 */  sh         $t2, ($t0)
 .L8005AA34:
-/* 5B634 8005AA34 0C018AC0 */  jal        func_80062B00
+/* 5B634 8005AA34 0C018AC0 */  jal        __osRestoreInt
 /* 5B638 8005AA38 02002025 */   or        $a0, $s0, $zero
 /* 5B63C 8005AA3C 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 5B640 8005AA40 8FB00018 */  lw         $s0, 0x18($sp)

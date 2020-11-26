@@ -56,7 +56,7 @@ glabel func_8005E0F0
 /* 5ED94 8005E194 00408825 */  or         $s1, $v0, $zero
 /* 5ED98 8005E198 02202025 */  or         $a0, $s1, $zero
 /* 5ED9C 8005E19C 8FA5002C */  lw         $a1, 0x2c($sp)
-/* 5EDA0 8005E1A0 0C015A30 */  jal        func_800568C0
+/* 5EDA0 8005E1A0 0C015A30 */  jal        osSendMesg
 /* 5EDA4 8005E1A4 00003025 */   or        $a2, $zero, $zero
 /* 5EDA8 8005E1A8 00408025 */  or         $s0, $v0, $zero
 .L8005E1AC:
