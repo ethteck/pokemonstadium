@@ -132,7 +132,7 @@ glabel func_8005E790
 /* 5F3F8 8005E7F8 11610008 */  beq        $t3, $at, .L8005E81C
 /* 5F3FC 8005E7FC 00000000 */   nop       
 /* 5F400 8005E800 8D240008 */  lw         $a0, 8($t1)
-/* 5F404 8005E804 0C015B2C */  jal        func_80056CB0
+/* 5F404 8005E804 0C015B2C */  jal        __osDequeueThread
 /* 5F408 8005E808 01202825 */   or        $a1, $t1, $zero
 /* 5F40C 8005E80C 8FAC0028 */  lw         $t4, 0x28($sp)
 /* 5F410 8005E810 8D840008 */  lw         $a0, 8($t4)

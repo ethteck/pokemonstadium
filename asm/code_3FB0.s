@@ -1986,7 +1986,7 @@ glabel func_80004F08
 .L80004F28:
 /* 5B28 80004F28 55C00004 */  bnel       $t6, $zero, .L80004F3C
 /* 5B2C 80004F2C 8E1001D8 */   lw        $s0, 0x1d8($s0)
-/* 5B30 80004F30 0C015A84 */  jal        func_80056A10
+/* 5B30 80004F30 0C015A84 */  jal        osStopThread
 /* 5B34 80004F34 02002025 */   or        $a0, $s0, $zero
 /* 5B38 80004F38 8E1001D8 */  lw         $s0, 0x1d8($s0)
 .L80004F3C:

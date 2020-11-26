@@ -877,7 +877,7 @@ glabel func_80008EB4
 /* 9B08 80008F08 00000000 */   nop       
 /* 9B0C 80008F0C 1040FFF9 */  beqz       $v0, .L80008EF4
 /* 9B10 80008F10 00402025 */   or        $a0, $v0, $zero
-/* 9B14 80008F14 0C015A84 */  jal        func_80056A10
+/* 9B14 80008F14 0C015A84 */  jal        osStopThread
 /* 9B18 80008F18 AFA20020 */   sw        $v0, 0x20($sp)
 /* 9B1C 80008F1C 0C0020E2 */  jal        func_80008388
 /* 9B20 80008F20 00000000 */   nop       

@@ -50,7 +50,7 @@ glabel func_80056C10
 /* 578A8 80056CA8 03E00008 */  jr         $ra
 /* 578AC 80056CAC 00000000 */   nop       
 
-glabel func_80056CB0
+glabel __osDequeueThread
 /* 578B0 80056CB0 00803025 */  or         $a2, $a0, $zero
 /* 578B4 80056CB4 8CC70000 */  lw         $a3, ($a2)
 /* 578B8 80056CB8 27BDFFF8 */  addiu      $sp, $sp, -8
