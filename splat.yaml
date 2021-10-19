@@ -40,13 +40,13 @@ segments:
     - [0xB130, asm] // dp code for text
     - [0xC030, asm] // extra sprites loader
     - [0xC3F0, asm] // yay0 decoder
-    - [0xC4B0, bin] // 
+    - [0xC4B0, bin] // ---UNKNOWN NO EXECUTING
     - [0xCE80, asm] //
     - [0xDDC0, asm] //
     - [0xE1C0, asm] //
     - [0xE570, asm] //
     - [0xE890, asm] //
-    - [0x11BA0, asm] //  
+    - [0x11BA0, asm] // display flags
     - [0x12D80, asm] // 
     - [0x18140, asm] // dp model animations
     - [0x18480, asm] // dp model animations
@@ -64,123 +64,123 @@ segments:
     - [0x2E460, asm] // pkm lab pokedex code
     - [0x2FEA0, asm] // minigames code
     - [0x30640, asm] // gallery code
-    - [0x32D10, asm]
-    - [0x33E30, asm]
-    - [0x33FE0, asm]
-    - [0x37370, asm]
-    - [0x373A0, asm]  // battle code
-    - [0x3D140, asm]  // music code
+    - [0x32D10, asm] // magikarp minigame point calculations
+    - [0x33E30, asm] // ---UNKNOWN NO EXECUTING
+    - [0x33FE0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x37370, asm] // ---UNKNOWN NO EXECUTING
+    - [0x373A0, asm] // battle code
+    - [0x3D140, asm] // music code
     - [0x43520, c] // 
     - [0x435B0, c] // 
-    - [0x435D0, asm]  // pkm lab cries code
-    - [0x45720, asm]  // music code
-    - [0x46680, asm]  // speech code
-    - [0x47B60, asm]  // sound code
-    - [0x485C0, asm]  // moves code 
-    - [0x48C60, asm]  // move effects code
-    - [0x490A0, asm]  // audio functions to 0x50C00
-    - [0x49190, bin]
-    - [0x49790, asm]
-    - [0x49BA0, asm]
-    - [0x49DC0, asm]
-    - [0x4A360, asm]
-    - [0x4A3E0, asm]
-    - [0x4B940, asm]
-    - [0x4BA90, asm]
-    - [0x4BDC0, asm]
-    - [0x4F410, asm]
-    - [0x4F7F0, asm]
-    - [0x4F870, asm]
-    - [0x4FDB0, asm]
-    - [0x4FE60, asm]
-    - [0x4FF50, bin]
-    - [0x50000, asm]
-    - [0x50120, asm]
-    - [0x50860, asm]
-    - [0x50990, asm]
-    - [0x50A00, asm]
-    - [0x50C20, asm]
-    - [0x50CC0, asm]
+    - [0x435D0, asm] // pkm lab cries code
+    - [0x45720, asm] // music code
+    - [0x46680, asm] // speech code
+    - [0x47B60, asm] // sound code
+    - [0x485C0, asm] // moves code 
+    - [0x48C60, asm] // move effects code
+    - [0x490A0, asm] // audio functions to 0x50C00
+    - [0x49190, bin] // pokemon cries code 
+    - [0x49790, asm] // menu sound effects 
+    - [0x49BA0, asm] // music sound engine
+    - [0x49DC0, asm] // audio flags
+    - [0x4A360, asm] // audio flags
+    - [0x4A3E0, asm] // audio flags
+    - [0x4B940, asm] // audio flags
+    - [0x4BA90, asm] // audio flags
+    - [0x4BDC0, asm] // clefairy minigame music sequencer flag 
+    - [0x4F410, asm] // pkm cries flags
+    - [0x4F7F0, asm] // SFX eco/frequency
+    - [0x4F870, asm] // audio quality
+    - [0x4FDB0, asm] // audio engine
+    - [0x4FE60, asm] // ---UNKNOWN NO EXECUTING
+    - [0x4FF50, bin] // audio latency
+    - [0x50000, asm] // 
+    - [0x50120, asm] // audio frequency
+    - [0x50860, asm] // title screen song flags
+    - [0x50990, asm] // 
+    - [0x50A00, asm] // title screen song setter
+    - [0x50C20, asm] // audio engine
+    - [0x50CC0, asm] // audio pointers and flags
     - [0x517A0, asm] // yay0 audio decoder
-    - [0x518A0, asm]
-    - [0x51BC0, asm]
-    - [0x51C50, asm]
-    - [0x520C0, asm]
-    - [0x52AC0, asm]
-    - [0x53150, asm]
-    - [0x535C0, asm]
-    - [0x53710, asm]
-    - [0x54310, asm]
-    - [0x558C0, asm]
-    - [0x55960, asm]
-    - [0x55BB0, asm]
-    - [0x55ED0, asm]
-    - [0x56170, asm]
-    - [0x56680, asm]
-    - [0x567B0, asm]
-    - [0x569F0, asm]
+    - [0x518A0, asm] // audio pointers and flags
+    - [0x51BC0, asm] // 
+    - [0x51C50, asm] // 
+    - [0x520C0, asm] // 
+    - [0x52AC0, asm] // 
+    - [0x53150, asm] // 
+    - [0x535C0, asm] // 
+    - [0x53710, asm] // 
+    - [0x54310, asm] // 
+    - [0x558C0, asm] // 
+    - [0x55960, asm] // 
+    - [0x55BB0, asm] // 
+    - [0x55ED0, asm] // 
+    - [0x56170, asm] // 
+    - [0x56680, asm] // 
+    - [0x567B0, asm] // ---?
+    - [0x569F0, asm] // 
     - [0x57190, asm]
     - [0x57230, asm]
     - [0x572D0, asm]
     - [0x574C0, c, os/O1/osSendMesg]
     - [0x57610, c, os/O1/osStopThread]
-    - [0x576D0, c, os/O1/osRecvMesg]
-    - [0x57810, asm]
-    - [0x57990, asm]
+    - [0x576D0, c, os/O1/osRecvMesg] // audio bool
+    - [0x57810, asm] // MI INTR_MASK_REG
+    - [0x57990, asm] // screen and UI resolution
     - [0x57F00, asm]
-    - [0x58010, asm]
-    - [0x58C70, asm]
-    - [0x58EC0, asm]
-    - [0x59350, asm]
-    - [0x597A0, asm]
-    - [0x598C0, asm]
-    - [0x59A10, asm]
-    - [0x59BF0, asm]
-    - [0x59C00, asm]
-    - [0x59C90, asm]
-    - [0x59D10, asm]
-    - [0x59DA0, asm]
-    - [0x5A0F0, asm]
-    - [0x5A100, asm]
-    - [0x5B1C0, asm]
-    - [0x5B450, asm]
-    - [0x5B4E0, asm]
-    - [0x5B590, asm]
-    - [0x5B5E0, asm]
-    - [0x5B6A0, asm]
-    - [0x5BB50, asm]
-    - [0x5BE30, asm]
-    - [0x5C2A0, asm]
-    - [0x5C420, asm]
+    - [0x58010, asm] // ---?
+    - [0x58C70, asm] //
+    - [0x58EC0, asm] //
+    - [0x59350, asm] //
+    - [0x597A0, asm] // ---?
+    - [0x598C0, asm] // ---?
+    - [0x59A10, asm] // inputs flags
+    - [0x59BF0, asm] // 
+    - [0x59C00, asm] // 
+    - [0x59C90, asm] // address segmenter
+    - [0x59D10, asm] // c0 status
+    - [0x59DA0, asm] // PIF functions
+    - [0x5A0F0, asm] // c0 status
+    - [0x5A100, asm] // 
+    - [0x5B1C0, asm] // obj. size, pos.
+    - [0x5B450, asm] // SP MEM/DRAM functions
+    - [0x5B4E0, asm] // SI functions
+    - [0x5B590, asm] // ---?
+    - [0x5B5E0, asm] // ---similar1?
+    - [0x5B6A0, asm] // SP status flag
+    - [0x5BB50, asm] // objs. tx. size, pos.
+    - [0x5BE30, asm] // ---similar2?
+    - [0x5C2A0, asm] // PI flags
+    - [0x5C420, asm] // PI flags
     - [0x5C900, hasm, os/osGetCount]  // RNG
-    - [0x5C910, asm]
-    - [0x5CD50, asm]
-    - [0x5CE70, asm]
-    - [0x5D9F0, asm]
-    - [0x5DAB0, asm]
-    - [0x5DAC0, asm]
-    - [0x5DCF0, asm]
-    - [0x5DDB0, asm]
-    - [0x5EAA0, asm]
-    - [0x5ECA0, asm]
-    - [0x5ECF0, asm]
-    - [0x5EDD0, asm]
-    - [0x5EE10, asm]
-    - [0x5EE50, asm]
-    - [0x5EEF0, asm]
-    - [0x5EFA0, asm]
-    - [0x5F050, asm]
-    - [0x5F140, asm]
-    - [0x5F240, asm]
-    - [0x5F490, asm]
-    - [0x5FA40, asm]
-    - [0x5FD50, asm]
-    - [0x5FDE0, asm]
+    - [0x5C910, asm] // ---?
+    - [0x5CD50, asm] //
+    - [0x5CE70, asm] //
+    - [0x5D9F0, asm] // c0 flags
+    - [0x5DAB0, asm] // objs. size flag
+    - [0x5DAC0, asm] //
+    - [0x5DCF0, asm] //
+    - [0x5DDB0, asm] // animation effects flags
+    - [0x5EAA0, asm] //
+    - [0x5ECA0, asm] // TLB flags 
+    - [0x5ECF0, asm] // audio/video functions
+    - [0x5EDD0, asm] // ---?
+    - [0x5EE10, asm] // 
+    - [0x5EE50, asm] // ascii functions
+    - [0x5EEF0, asm] // cache/buffer calculations
+    - [0x5EFA0, asm] // video sequencer flags
+    - [0x5F050, asm] // 
+    - [0x5F140, asm] // SP status
+    - [0x5F240, asm] // c0 functions
+    - [0x5F490, asm] // PI functions
+    - [0x5FA40, asm] // gallery save data
+    - [0x5FD50, asm] // c0 flags
+    - [0x5FDE0, asm] // ---?
     - [0x61010, asm]
     - [0x61270, asm]
     - [0x61EF0, asm]
     - [0x621F0, asm]
-    - [0x62E70, asm]
+    - [0x62E70, asm] // audio pitch
     - [0x62FC0, asm]
     - [0x63010, asm]
     - [0x630B0, asm]
