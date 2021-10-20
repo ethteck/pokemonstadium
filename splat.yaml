@@ -31,9 +31,9 @@ segments:
     - [0x2EC0, asm] // intro loader
     - [0x3A80, asm] // transition loader
     - [0x3FB0, asm] // PRES-JPEG decoder
-    - [0x60A0, asm] // 
+    - [0x60A0, asm] // ---UNKNOWN NO EXECUTING
     - [0x6430, asm] // controller code
-    - [0x6BC0, asm] // 
+    - [0x6BC0, asm] // graphics code
     - [0x75F0, asm] // stage loader
     - [0x8EC0, asm] // crash handler
     - [0xAF00, asm] // camera code
@@ -41,13 +41,13 @@ segments:
     - [0xC030, asm] // extra sprites loader
     - [0xC3F0, asm] // yay0 decoder
     - [0xC4B0, bin] // ---UNKNOWN NO EXECUTING
-    - [0xCE80, asm] //
-    - [0xDDC0, asm] //
-    - [0xE1C0, asm] //
-    - [0xE570, asm] //
-    - [0xE890, asm] //
+    - [0xCE80, asm] // pres-jpeg flags
+    - [0xDDC0, asm] // simple return?
+    - [0xE1C0, asm] // gb tower functions
+    - [0xE570, asm] // transfer pak functions 
+    - [0xE890, asm] // ---UNKNOWN NO EXECUTING
     - [0x11BA0, asm] // display flags
-    - [0x12D80, asm] // 
+    - [0x12D80, asm] // ---?
     - [0x18140, asm] // dp model animations
     - [0x18480, asm] // dp model animations
     - [0x19840, asm] // alternative pkm textures
@@ -70,8 +70,8 @@ segments:
     - [0x37370, asm] // ---UNKNOWN NO EXECUTING
     - [0x373A0, asm] // battle code
     - [0x3D140, asm] // music code
-    - [0x43520, c] // 
-    - [0x435B0, c] // 
+    - [0x43520, c] // audio flags
+    - [0x435B0, c] // stack cache cleaner
     - [0x435D0, asm] // pkm lab cries code
     - [0x45720, asm] // music code
     - [0x46680, asm] // speech code
@@ -94,54 +94,54 @@ segments:
     - [0x4FDB0, asm] // audio engine
     - [0x4FE60, asm] // ---UNKNOWN NO EXECUTING
     - [0x4FF50, bin] // audio latency
-    - [0x50000, asm] // 
+    - [0x500F8, asm] // ---UNKNOWN NO EXECUTING
     - [0x50120, asm] // audio frequency
     - [0x50860, asm] // title screen song flags
-    - [0x50990, asm] // 
+    - [0x50990, asm] // ---UNKNOWN NO EXECUTING
     - [0x50A00, asm] // title screen song setter
     - [0x50C20, asm] // audio engine
     - [0x50CC0, asm] // audio pointers and flags
     - [0x517A0, asm] // yay0 audio decoder
     - [0x518A0, asm] // audio pointers and flags
-    - [0x51BC0, asm] // 
-    - [0x51C50, asm] // 
-    - [0x520C0, asm] // 
-    - [0x52AC0, asm] // 
-    - [0x53150, asm] // 
-    - [0x535C0, asm] // 
-    - [0x53710, asm] // 
-    - [0x54310, asm] // 
-    - [0x558C0, asm] // 
-    - [0x55960, asm] // 
-    - [0x55BB0, asm] // 
-    - [0x55ED0, asm] // 
-    - [0x56170, asm] // 
-    - [0x56680, asm] // 
+    - [0x51BC0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x51C50, asm] // ---UNKNOWN NO EXECUTING
+    - [0x520C0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x52AC0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x53150, asm] // ---UNKNOWN NO EXECUTING
+    - [0x535C0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x53710, asm] // ---UNKNOWN NO EXECUTING
+    - [0x54310, asm] // ---UNKNOWN NO EXECUTING
+    - [0x558C0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x55960, asm] // ---UNKNOWN NO EXECUTING
+    - [0x55BB0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x55ED0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x56170, asm] // ---UNKNOWN NO EXECUTING
+    - [0x56680, asm] // ---UNKNOWN NO EXECUTING
     - [0x567B0, asm] // ---?
-    - [0x569F0, asm] // 
-    - [0x57190, asm]
-    - [0x57230, asm]
-    - [0x572D0, asm]
+    - [0x569F0, asm] // PI functions
+    - [0x57190, asm] // PI functions
+    - [0x57230, asm] // ---UNKNOWN NO EXECUTING
+    - [0x572D0, asm] // ---UNKNOWN NO EXECUTING
     - [0x574C0, c, os/O1/osSendMesg]
     - [0x57610, c, os/O1/osStopThread]
     - [0x576D0, c, os/O1/osRecvMesg] // audio bool
     - [0x57810, asm] // MI INTR_MASK_REG
     - [0x57990, asm] // screen and UI resolution
-    - [0x57F00, asm]
+    - [0x57F00, asm] // ---UNKNOWN NO EXECUTING
     - [0x58010, asm] // ---?
-    - [0x58C70, asm] //
-    - [0x58EC0, asm] //
-    - [0x59350, asm] //
+    - [0x58C70, asm] // ---UNKNOWN NO EXECUTING
+    - [0x58EC0, asm] // transfer pak functions
+    - [0x59350, asm] // transfer pak functions
     - [0x597A0, asm] // ---?
     - [0x598C0, asm] // ---?
     - [0x59A10, asm] // inputs flags
-    - [0x59BF0, asm] // 
-    - [0x59C00, asm] // 
+    - [0x59BF0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x59C00, asm] // ---UNKNOWN NO EXECUTING
     - [0x59C90, asm] // address segmenter
     - [0x59D10, asm] // c0 status
     - [0x59DA0, asm] // PIF functions
     - [0x5A0F0, asm] // c0 status
-    - [0x5A100, asm] // 
+    - [0x5A100, asm] // transfer pak functions
     - [0x5B1C0, asm] // obj. size, pos.
     - [0x5B450, asm] // SP MEM/DRAM functions
     - [0x5B4E0, asm] // SI functions
@@ -154,73 +154,73 @@ segments:
     - [0x5C420, asm] // PI flags
     - [0x5C900, hasm, os/osGetCount]  // RNG
     - [0x5C910, asm] // ---?
-    - [0x5CD50, asm] //
-    - [0x5CE70, asm] //
+    - [0x5CD50, asm] // ---UNKNOWN NO EXECUTING
+    - [0x5CE70, asm] // ---UNKNOWN NO EXECUTING
     - [0x5D9F0, asm] // c0 flags
     - [0x5DAB0, asm] // objs. size flag
-    - [0x5DAC0, asm] //
-    - [0x5DCF0, asm] //
+    - [0x5DAC0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x5DCF0, asm] // ---UNKNOWN NO EXECUTING
     - [0x5DDB0, asm] // animation effects flags
     - [0x5EAA0, asm] //
     - [0x5ECA0, asm] // TLB flags 
     - [0x5ECF0, asm] // audio/video functions
     - [0x5EDD0, asm] // ---?
-    - [0x5EE10, asm] // 
+    - [0x5EE10, asm] // ---UNKNOWN NO EXECUTING
     - [0x5EE50, asm] // ascii functions
     - [0x5EEF0, asm] // cache/buffer calculations
     - [0x5EFA0, asm] // video sequencer flags
-    - [0x5F050, asm] // 
+    - [0x5F050, asm] // ---UNKNOWN NO EXECUTING
     - [0x5F140, asm] // SP status
     - [0x5F240, asm] // c0 functions
     - [0x5F490, asm] // PI functions
     - [0x5FA40, asm] // gallery save data
     - [0x5FD50, asm] // c0 flags
     - [0x5FDE0, asm] // ---?
-    - [0x61010, asm]
-    - [0x61270, asm]
-    - [0x61EF0, asm]
-    - [0x621F0, asm]
+    - [0x61010, asm] // ---UNKNOWN NO EXECUTING
+    - [0x61270, asm] // ---UNKNOWN NO EXECUTING
+    - [0x61EF0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x621F0, asm] // ---UNKNOWN NO EXECUTING
     - [0x62E70, asm] // audio pitch
-    - [0x62FC0, asm]
-    - [0x63010, asm]
-    - [0x630B0, asm]
-    - [0x630C0, asm]
-    - [0x63160, asm]
-    - [0x634D0, asm]
-    - [0x63690, asm]
-    - [0x63720, asm]
-    - [0x63860, asm]
-    - [0x63B60, c, os/O1/code_63B60]
-    - [0x63B90, asm]
-    - [0x63D00, asm]
-    - [0x63D50, asm]
-    - [0x63EB0, asm]
-    - [0x63EE0, asm]
-    - [0x63F50, asm]
-    - [0x64110, asm]
-    - [0x64270, asm]
-    - [0x642F0, asm]
-    - [0x64360, asm]
-    - [0x643C0, asm]
-    - [0x64410, asm]
-    - [0x64890, asm]
-    - [0x64A00, hasm, os/__osGetCause]
-    - [0x64A10, asm]
-    - [0x64B70, asm]
-    - [0x64C50, asm]
-    - [0x658A0, asm]
-    - [0x65B40, asm]
-    - [0x65B90, asm]
-    - [0x65BC0, asm]
-    - [0x65F10, asm]
-    - [0x65F70, asm]
-    - [0x661F0, asm]
-    - [0x66250, asm]
-    - [0x66460, asm]
-    - [0x66500, asm]
-    - [0x66510, asm]
-    - [0x66850, asm]
-    - [0x66B50, asm]
+    - [0x62FC0, asm] // GB DPC CLOCK
+    - [0x63010, asm] // transfer pak flag 
+    - [0x630B0, asm] // c0 compare
+    - [0x630C0, asm] // AI status
+    - [0x63160, asm] // SP DRAM flags
+    - [0x634D0, asm] // obj. color, pos, size
+    - [0x63690, asm] // c0 flags
+    - [0x63720, asm] // ---? 
+    - [0x63860, asm] // VI functions
+    - [0x63B60, c, os/O1/code_63B60] // c0 flag
+    - [0x63B90, asm] // display functions
+    - [0x63D00, asm] // PI flags
+    - [0x63D50, asm] // c0 functions
+    - [0x63EB0, asm] //
+    - [0x63EE0, asm] // c0 functions
+    - [0x63F50, asm] // transfer pak functions
+    - [0x64110, asm] // PI DRAM functions
+    - [0x64270, asm] // ---UNKNOWN NO EXECUTING
+    - [0x642F0, asm] // move floating points
+    - [0x64360, asm] // TLB flags
+    - [0x643C0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x64410, asm] // transfer pak functions
+    - [0x64890, asm] // transfer pak flags
+    - [0x64A00, hasm, os/__osGetCause] // c0 flags
+    - [0x64A10, asm] // PI DRAM functions
+    - [0x64B70, asm] // c0 funtions
+    - [0x64C50, asm] // ---UNKNOWN NO EXECUTING
+    - [0x658A0, asm] // maths functions, hex to dec
+    - [0x65B40, asm] // SI functions
+    - [0x65B90, asm] // SP status flags
+    - [0x65BC0, asm] // c0 flags
+    - [0x65F10, asm] // ---? 
+    - [0x65F70, asm] // c0 flags
+    - [0x661F0, asm] // ---UNKNOWN NO EXECUTING
+    - [0x66250, asm] // ---UNKNOWN NO EXECUTING
+    - [0x66460, asm] // ---UNKNOWN NO EXECUTING
+    - [0x66500, asm] // ---UNKNOWN NO EXECUTING
+    - [0x66510, asm] // transfer pak functions
+    - [0x66850, asm] // AI status
+    - [0x66B50, asm] // ---UNKNOWN NO EXECUTING
     #- [0x66BC0, asm]
-  - [0x66BC0, bin]
+  - [0x66BC0, bin]  // RSP MIRROR TABLE CODE
   - [0x2000000]
